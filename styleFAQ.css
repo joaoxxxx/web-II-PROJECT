@@ -1,0 +1,49 @@
+/* Adicione estilos específicos para a página de FAQ aqui */
+
+.faq-section {
+    padding: 20px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 1rem;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.quick-links ul {
+    list-style-type: none;
+}
+
+.quick-links ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.quick-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
