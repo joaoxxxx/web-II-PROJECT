@@ -263,21 +263,15 @@ p.find-out{
 .find-out a:hover{
     background-color: #333;
   }
-@media screen and (max-width:1200px){
-    .designs {
+
+.designs {
     overflow:hidden;
     margin:20px 0 20px;
     }
 .boxes {
     margin-left:0;
     }
-  }
-@media screen and (max-width:992px){
-    .box{flex:1 0 50%;}
-  }
-@media screen and (max-width:767px){
-    .box{flex:1 0 100%;}
-  }
+
 .b1{
     text-align: center;
 }
