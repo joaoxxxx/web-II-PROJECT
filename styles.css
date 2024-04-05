@@ -240,7 +240,7 @@ h1{font-size: 30px;}
     color:#fff;
     background-size:cover;
   }
-  .box5{flex:2 0 50%}
+.box5{flex:2 0 50%}
   
 .box h3{
     color:#fff;
@@ -248,34 +248,34 @@ h1{font-size: 30px;}
     font-weight:normal;
     font-size:2rem;
   }
-  .box p{
+.box p{
     margin:0 0 1rem;
     font-size:1rem;
   }
-  p.find-out{
+p.find-out{
     margin:2rem 0 0;
   }
-  .find-out a{
+.find-out a{
     color:#fff;
     text-decoration:none;
     font-weight:bold;
   }
-  .find-out a:hover{
+.find-out a:hover{
     background-color: #333;
   }
-  @media screen and (max-width:1200px){
+@media screen and (max-width:1200px){
     .designs {
     overflow:hidden;
     margin:20px 0 20px;
     }
-    .boxes {
+.boxes {
     margin-left:0;
     }
   }
-  @media screen and (max-width:992px){
+@media screen and (max-width:992px){
     .box{flex:1 0 50%;}
   }
-  @media screen and (max-width:767px){
+@media screen and (max-width:767px){
     .box{flex:1 0 100%;}
   }
 .b1{
