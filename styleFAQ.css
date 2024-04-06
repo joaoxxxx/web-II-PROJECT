@@ -1,35 +1,93 @@
-/* Adicione estilos específicos para a página de FAQ aqui */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-.faq-section {
+.butao .btn, .cta .btn {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.butao :hover{background-color: #b9401b;}
+
+.baracima{margin-left: 500px;}
+body {
+    font-family: Arial, sans-serif;
+    font-style: #556677;
+}
+.col{border-color:beige;border-left: 2px;border-right: 2px;}
+.row{display: flex;
+    flex-wrap: wrap;}
+header {
+    background-color: #14181C;
     padding: 20px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.faq-list {
-    display: flex;
-    flex-direction: column;
+.logo h1 {
+    font-size: 1.5rem;
+    color: white;
 }
 
-.faq-item {
+nav ul {
+    list-style-type: none;
+
+}
+nav ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    position: relative;
+    top: 1px;
+    color: #99AABB;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    min-height: calc(100vh - 170px)
+}
+
+.hero image {
+    height: 100%;
     margin-bottom: 20px;
 }
 
-.faq-item h3 {
-    font-size: 1.2rem;
+.hero-text h2 {
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
-.faq-item p {
-    font-size: 1rem;
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
 }
 
-footer {
-    margin-top: 20px;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+.feature {
     text-align: center;
 }
 
+.feature img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+.center{
+    text-align: center;
+}
+.como-funciona {
+    text-align: center;
+}
 .contact-info p {
     margin-bottom: 10px;
 }
@@ -47,3 +105,248 @@ footer {
     color: #fff;
     text-decoration: none;
 }
+
+img{    
+height: 100%;
+width: 100%;
+}
+
+.centered {
+    font-family: 'Times New Roman', Times, serif,;font-weight: 900;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(90deg, rgb(112, 137, 181), rgb(215, 136, 87));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.overimagem {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.5);}
+h1{font-size: 30px;
+}
+
+.imagegrafico{
+    height: 120%;
+    width: 120%;
+}
+.textografico{
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    margin-bottom: 15px;
+    text-align: justify;
+    margin: 30px;
+    text-align: center;
+}
+
+.container {
+    margin: 30px;
+    display: flex;
+    text-align: left; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+   }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+    border-right: 2px solid #c4c4c4;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.col:last-child {
+    border-right: none;
+}
+
+.card {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+}
+
+.card-header {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.card-header img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card-header h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.card-content {
+    padding: 20px;
+    background-color: #fff;
+    height: 0;
+    overflow: hidden;
+}
+
+.designs {
+    overflow:hidden;
+    margin:20px;
+  }
+.boxes {
+    display:flex;
+    flex-wrap:wrap;
+  }
+.box1{background:#f4989d;}
+.box2{background:#615e7d;}
+.box3{background:#917d7e;}
+.box4{background:#bd8dbe;}
+.box5{background:#abb0b4;}
+.box6{background:#81c99c;}
+.box7{background:#334c49;}
+.box{
+    flex:1 0 25%;
+    padding:50px 25px 50px 40px;
+    color:#fff;
+    background-size:cover;
+  }
+.box5{flex:2 0 50%}
+  
+.box h3{
+    color:#fff;
+    margin:0 0 1rem;
+    font-weight:normal;
+    font-size:2rem;
+  }
+.box p{
+    margin:0 0 1rem;
+    font-size:1rem;
+  }
+p.find-out{
+    margin:2rem 0 0;
+  }
+.find-out a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+  }
+.find-out a:hover{
+    background-color: #333;
+  }
+
+.designs {
+    overflow:hidden;
+    margin:20px 0 20px;
+    }
+.boxes {
+    margin-left:0;
+    }
+
+.b1{
+    text-align: center;
+}
+.imagemhowto{
+    height: 30%;
+    width: 30%;
+}
+
+/**  =============================================================================00                    **/
+.backgroundpagina{
+    background-color: #FFFFFF;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.row{flex-wrap: wrap;display: flex;}
+.bara-lado{
+    border-right: 2px solid #D0D8E0;
+    width: 235px;
+    height: 325px;
+    position: absolute;
+    top: 130px;
+    left: 250px;
+}
+ul{list-style: none;}
+
+.bara-lado ul li a{
+    text-decoration: none;
+    color:#556677;
+    padding:30px;
+    line-height:1.7;
+    height: fit-content;
+}
+.quemsomos-titulo{
+    border-bottom: 2px solid #D0D8E0;
+    color: #556677;
+    line-height: 1.7;
+    height: fit-content;
+    margin-bottom: 20px;
+    align-self: flex-start;
+    position: absolute;
+    top: 130px;;
+    left: 575px;
+}
+.quemsomostexto{
+    color: #556677;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    margin-top: 110px;
+    margin-left: 575px;
+    margin-right: 250px;
+    top: 170px;
+    left: 575px;
+
+}
+.quemsomostexto2{
+    color: #556677;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    margin-top: 30px;
+    margin-left: 575px;
+    margin-right: 250px;
+    top: 170px;
+    left: 575px;
+
+}
+.footer{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100% ;
+    margin-top: auto;
+}
+.wrapper{
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    min-height: 100vh;    
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow:scroll;
+}
+body{
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: max-content;
+}
+
+.wrap {max-width: 1200px;}
