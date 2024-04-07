@@ -1,3 +1,4 @@
+html { scroll-behavior: smooth;}
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +6,7 @@
 }
 
 .butao .btn, .cta .btn {
-    background-color: #ff5722;
+    background-color: #2e71b4;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -13,7 +14,7 @@
     text-decoration: none;
 }
 
-.butao :hover{background-color: #b9401b;}
+.butao :hover{background-color: #1f4c79;}
 
 .baracima{margin-left: 500px;}
 body {
@@ -51,7 +52,12 @@ nav ul li a {
     color: #99AABB;
     text-decoration: none;
 }
-
+nav ul li a{
+    transition: color 0.15s linear;
+}
+nav ul li a:hover {
+    color:#2e71b4;
+}
 main {
     padding: 20px;
     min-height: calc(100vh - 170px)
@@ -327,19 +333,6 @@ ul{list-style: none;}
     width: 100% ;
     margin-top: auto;
 }
-.wrapper{
-    min-height: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.container {
-    min-height: 100vh;    
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    overflow:scroll;
-}
 body{
     margin: 0;
     height: 100%;
@@ -349,4 +342,4 @@ body{
     max-height: max-content;
 }
 
-.wrap {max-width: 1200px;}
+/**                    **/
