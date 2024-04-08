@@ -1,49 +1,38 @@
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image:linear-gradient(45deg, rgb(0, 0, 169,0.4),rgb(0, 0, 102,1));
+    background-color: #f9f9f9;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    width: 100vh;
 }
-.tituloesquerdo{
-    position: absolute;
-    top: 80px;
-    left: 100px;
-    width: 700px;
-    color: white;
-    font-size: 50px;
-}
-.textoesquerdo{
-    position: absolute;
-    top: 255px;
-    left: 100px;
-    width: 700px;
-    height: 300px;
-    font-size: 20px;
-    color: white;
-}
+
 .signin-container {
-    position: absolute;
-    top: 135px;
-    right: 200px;
-    padding: 0px;
-    border-radius: 10px;
-    width: 300px;
-    font-size: 35px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+    height: 300PX;
+    border:solid 0.5px rgba(0,0,0,.125);
+    margin-right: 75px;
+    text-align: center;
+    
 }
 
 .signin-container h2 {
-    font-size: 40px;
+    font-size: 24px;
     margin-bottom: 20px;
+    text-align: center;
+    color:#1f4c79;
+    margin-bottom: 40px;
 }
 
 .input-group {
     margin-bottom: 20px;
-    color: white;
 }
 
 .input-group label {
@@ -54,21 +43,75 @@ body {
 .input-group input {
     width: 100%;
     padding: 10px;
-    border-radius: 0px;
-    border: 5px solid #ffffff;
-    background-color: rgb(0, 0, 0,0);
+    border-radius: 60px;
+    border: 1px solid #ccc;
 }
 
 .signin-btn {
-    background-color: #ffffff; /* Laranja */
-    color: #000000;
-    padding: 10px 20px;
+    position: relative;
+    top: 15px;
+    padding: 20px 50px;
     border: none;
-    border-radius: 5px;
+    color: #1f4c79;
+    background-color: #fff;
+    border-radius: 80px;
     cursor: pointer;
     font-size: 16px;
+    border: 1px solid #1f4c79;
+    transition-property:all 2s;
+    
+}
+.signin-btn:hover {
+    transition: all 0.4s;background-color: 1s;
+    background-color:#1f4c79;
+    transition: all 1s;border: 1s;
+    border: #fff;
+    transition: all 1s;color:0.7s;
+    color: #fff;
+}
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+input{
+    color:#394e68;
+    font-weight: 400;
+
+}
+.container {
+    padding: 40px;
+    min-width: 300px;
+    height: 300PX;
+    margin-left: 40px;
+    text-align: center;
+    max-width: 350PX;
+}
+.info {
+    display: flex; /* Use flexbox */
+    justify-content: space-around; /* Distribute items evenly along the main axis */
+    align-items: center; /* Center items along the cross axis */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
 }
 
-.signin-btn:hover {
-    background-color: #FF8C00; /* Laranja mais escuro */
+.register-btn {
+    padding: 20px 50px;
+    border: none;
+    color: #da6d00;
+    background-color: #fff;
+    border-radius: 80px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #da6d00;
+    transition-property:all 2s;
+    
 }
+.register-btn:hover {
+    transition: all 0.4s;background-color: 1s;
+    background-color:#da6d00;
+    transition: all 1s;border: 1s;
+    border: #fff;
+    transition: all 1s;color:0.7s;
+    color: #fff;
+}
+
+.container h3{
+    color: #1f4c79;
+}
+.container h2{font-size: medium;}
