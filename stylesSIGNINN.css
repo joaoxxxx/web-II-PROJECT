@@ -18,9 +18,8 @@ body {
 
 .signin-container {
     background-color: #f9f9f9;
-    position: relative;
-    left: 130px;
-    top: 125px;
+    position: absolute;
+    top: 180px;
     padding: 40px;
     border-radius: 30px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -85,8 +84,8 @@ input{
 
 }
 .container {
-    position: relative;
-    right: 80px;
+    position: absolute;
+    margin-top: 55px;
     line-height: 30px;
     top: 125px;
     min-width: 450px;
