@@ -295,23 +295,23 @@ p.find-out{
 }
 
 .opcoes{
-    background-color: #14181C;
+    background-color: #7293b5;
     position: absolute;
     top: 87px;
     left: 400px;
     margin-top: 20px;
-    width: 300px;
+    width: 247px;
     height: 70px;
 }
 
 .pesquisa{
     background-color: #818181;
-    border-left: 1px gray solid;
+    border-left: 2px rgb(0, 0, 0) solid;
     position: absolute;
     top: 87px;
-    left: 700px;
+    left: 645px;
     margin-top: 20px;
-    width: 700px;
+    width: 750px;
     height: 70px;
 }
 .grid-container {
