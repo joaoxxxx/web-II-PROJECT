@@ -1,4 +1,4 @@
-  
+
 const options = {
     colors: ["#1A56DB", "#FDBA8C"],
     series: [
