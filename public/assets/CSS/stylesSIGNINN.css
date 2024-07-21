@@ -1,0 +1,233 @@
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  }
+  
+  .symbol {
+    font-size: 60px;
+  }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.signin-container {
+    background-color: #f9f9f9;
+    position: absolute;
+    top: 180px;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    min-width: 400px;
+    height: 400PX;
+    border:solid 0.5px rgba(0,0,0,.125);
+    margin-right: 75px;
+    text-align: center;
+    
+}
+
+.signin-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color:#1f4c79;
+    margin-bottom: 40px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 60px;
+    border: 1px solid #ccc;
+}
+
+.signin-btn {
+    position: relative;
+    top: 30px;
+    padding: 20px 50px;
+    border: none;
+    color: #1f4c79;
+    background-color: #fff;
+    border-radius: 80px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #1f4c79;
+    transition-property:all 2s;
+    
+}
+.signin-btn:hover {
+    transition: all 0.4s;background-color: 1s;
+    background-color:#1f4c79;
+    transition: all 1s;border: 1s;
+    border: #fff;
+    transition: all 1s;color:0.7s;
+    color: #fff;
+}
+
+input{
+    color:#394e68;
+    font-weight: 400;
+
+}
+.container {
+    position: absolute;
+    margin-top: 55px;
+    line-height: 30px;
+    top: 125px;
+    min-width: 450px;
+    height: 400PX;
+    margin-left: 40px;
+    text-align: center;
+}
+.container h1{
+    color: #1f4c79;
+}
+
+.info {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.register-btn {
+    padding: 20px 50px;
+    position: relative;
+    top: 9%;
+    border: none;
+    color: #da6d00;
+    background-color: #fff;
+    border-radius: 80px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #da6d00;
+    transition-property:all 2s;
+    
+}
+.register-btn:hover {
+    transition: all 0.4s;background-color: 1s;
+    background-color:#da6d00;
+    transition: all 1s;border: 1s;
+    border: #fff;
+    transition: all 1s;color:0.7s;
+    color: #fff;
+}
+.login-btn {
+    padding: 20px 50px;
+    position: relative;
+    border: none;
+    color: #da6d00;
+    background-color: #fff;
+    border-radius: 80px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #da6d00;
+    transition-property:all 2s;
+    
+}
+.login-btn:hover {
+    transition: all 0.4s;background-color: 1s;
+    background-color:#da6d00;
+    transition: all 1s;border: 1s;
+    border: #fff;
+    transition: all 1s;color:0.7s;
+    color: #fff;
+}
+.container h1{
+    margin-bottom: 25px;
+    margin-top: 30px;
+}
+.container h3{
+    color: #1f4c79;
+    font-weight: 400;
+}
+.container h2{
+    color: #707070;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 45px;
+}
+.container h4{
+    font-size: x-large;
+    font-weight: 900;
+}
+/**                              **/
+/**                              **/
+/**                              **/
+/**                              **/
+
+html { scroll-behavior: smooth;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.butao .btn, .cta .btn {
+    background-color: #2e71b4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.butao :hover{background-color: #1f4c79;}
+
+.baracima{margin-left: 500px;}
+
+body {
+    font-family: Arial, sans-serif;
+    font-style: #556677;
+    
+}
+.col{border-color:beige;border-left: 2px;border-right: 2px;}
+.row{display: flex;
+    flex-wrap: wrap;}
+
+    header{
+        background-color: #14181C;
+        padding: 10px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header li a{
+            font-size: 16px;
+    }       
+    nav ul {
+        list-style-type: none;
+    }
+    nav ul li {
+        display: inline;
+        margin-right: 30px;
+    }     
+    nav ul li a {
+        position: relative;
+        top: 1px;
+        left: 190px;
+        color: #99AABB;
+        text-decoration: none;
+    }
+    nav ul li a{
+        transition: color 0.3s linear;
+    }
+    nav ul li a:hover {
+        color:#2e71b4;
+    }
+
+.message {position: relative; top: 5px;font-weight: bold;}

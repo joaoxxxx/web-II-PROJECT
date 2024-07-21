@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="assets/images/cima.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="assets/CSS/stylesSIGNINN.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            animateFromLeftToCenter('info11');
+            animateFromRightToCenter('info22');
+        });
+
+        function animateFromLeftToCenter(elementId) {
+            var element = document.getElementById(elementId);
+            var posX = 0;
+            function animate() {
+                posX += 2;
+                if (posX < 280) {
+                    element.style.left = posX + "px";
+                    requestAnimationFrame(animate);
+                }
+            }
+            animate();
+        }
+
+        function animateFromRightToCenter(elementId) {
+            var element = document.getElementById(elementId);
+            var posX = 1100; 
+            var targetPosition = 810;
+
+            function animate() {
+                posX -= 2;
+                if (posX > targetPosition) {
+                    element.style.left = posX + "px";
+                    requestAnimationFrame(animate);
+                }
+            }
+            animate();
+        }
+    </script>
+
+    <header>
+        <div class="logo">
+            <a href="index.html" class="logosite">
+                <img src="./assets/images/logo.png" style="height: 50px;">
+            </a>
+        </div>
+        <div class="baracima"></div>
+        <nav>
+            <ul>
+                <li><a href="faq.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+        <div class="butao">
+            <a href="signin.html" class="btn">Login/SignUp</a>
+        </div>
+    </header>
+    <div class="info">
+        <div class="signin-container" id="info11">
+            <h2 style="text-decoration: black;">Acesso Clientes</h2>
+            <div class="signin-content">
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="username_email">Username/Email</label>
+                        <input type="text" id="username_email" name="username_email" placeholder="Enter your username or email">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password">
+                    </div>
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
+                <div id="message" class="message"></div>
+            </div>
+        </div>
+        <div class="container" id="info22">
+            <h4>
+                <span class="material-symbols-outlined">
+                    <span class="symbol">person</span>
+                </span>
+            </h4>
+            <p></p>
+            <h1>Ainda não está registado?</h1>
+            <h2>Registe-se e descubra todas as nossas vantagens</h2>
+            <h3>Poderá <b>Consultar as suas faturas</h3>
+            <h3>...E muito mais</h3></b>
+            <a href="signup.html" class="register-btn" style="text-decoration: none;">Sign Up</a>
+        </div>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            var username_email = document.getElementById('username_email').value;
+            var password = document.getElementById('password').value;
+
+            try {
+                let response = await fetch('http://localhost:3000/api/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        username_email: username_email,
+                        password: password
+                    }),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                let data = await response.json();
+                var messageElement = document.getElementById("message");
+                messageElement.textContent = data.message;
+                console.log(data);
+
+                if (data.token) {
+                    localStorage.setItem('token', data.token);
+                }
+
+                if (messageElement.textContent.toLowerCase().includes('success')) {
+                    setTimeout(() => {
+                        window.location.href = 'flowbite.html';
+                    }, 2000);
+                }
+            } catch (error) {
+                console.error('There was an error', error);
+                document.getElementById("message").textContent = 'Error: ' + error.message;
+            }
+        });
+    </script>
+</body>
+<script>
+    function mySubmit(obj) {
+        var pwdObj = document.getElementById('pwd');
+        var hashObj = new jsSHA("SHA-512", "TEXT", {numRounds: 1});
+        hashObj.update(pwdObj.value);
+        var hash = hashObj.getHash("HEX");
+        pwdObj.value = hash;
+    }
+</script>
+</html>

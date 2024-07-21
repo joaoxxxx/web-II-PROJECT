@@ -1,0 +1,68 @@
+# Register User
+curl -X POST http://localhost:3000/api/users -H "Content-Type: application/json" -d "{\"name\": \"__NAME__\", \"username\": \"__USERNAME__\", \"email\": \"__EMAIL__\", \"password\": \"__PASSWORD__\"}"
+
+# Login
+curl -X POST http://localhost:3000/api/login -H "Content-Type: application/json" -d "{\"username_email\": \"__USERNAME_OR_EMAIL__\", \"password\": \"__PASSWORD__\"}"
+
+# Last Login
+curl -X GET http://localhost:3000/api/users/last_login -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImlhdCI6MTcxNTk0NjIzNH0.BKwYwzerOi2eq48C6NZlLcach07uW-dmQebkBuNE2PA"
+
+# Update User Email
+curl -X PUT http://localhost:3000/api/users/email -H "Authorization: Bearer __TOKEN__" -H "Content-Type: application/json" -d "{\"email\": \"novoemail@example.com\"}"
+
+# Update User Name
+curl -X PUT http://localhost:3000/api/users/name -H "Authorization: Bearer __TOKEN__" -H "Content-Type: application/json" -d "{\"name\": \"New Name\"}"
+
+# Update User Username
+curl -X PUT http://localhost:3000/api/users/username -H "Authorization: Bearer __TOKEN__" -H "Content-Type: application/json" -d "{\"username\": \"newusername\"}"
+
+# Update User Password
+curl -X PUT http://localhost:3000/api/users/password -H "Authorization: Bearer __TOKEN__" -H "Content-Type: application/json" -d "{\"password\": \"newpassword\"}"
+
+# Update Brand Status
+curl -X PUT http://localhost:3000/api/brand/status/__BRAND_ID__ -H "Authorization: Bearer __TOKEN__" -H "Content-Type: application/json" -d "{\"status\": \"newstatus\"}"
+
+# Update Category Status
+curl -X PUT http://localhost:3000/api/category/status/__CATEGORY_ID__ -H "Authorization: Bearer __TOKEN__" -H "Content-Type: application/json" -d "{\"status\": \"newstatus\"}"
+
+# Update Model Status
+curl -X PUT http://localhost:3000/api/model/status/__MODEL_ID__ -H "Authorization: Bearer __TOKEN__" -H "Content-Type: application/json" -d "{\"status\": \"newstatus\"}"
+
+# Create Brand
+curl -X POST http://localhost:3000/api/brand -H "Content-Type: application/json" -d "{\"name\": \"Brand Name\"}"
+
+# Get Brands
+curl -X GET http://localhost:3000/api/brand
+
+# Create User
+curl -X POST http://localhost:3000/api/users -H "Content-Type: application/json" -d "{\"name\": \"User Name\", \"username\": \"username\", \"email\": \"user@example.com\", \"password\": \"userpassword\"}"
+
+# Get Users
+curl -X GET http://localhost:3000/api/users
+
+# Create Model
+curl -X POST http://localhost:3000/api/model -H "Content-Type: application/json" -d "{\"name\": \"Model Name\"}"
+
+# Get Models
+curl -X GET http://localhost:3000/api/model
+
+# Create Category
+curl -X POST http://localhost:3000/api/category -H "Content-Type: application/json" -d "{\"name\": \"Category Name\"}"
+
+# Get Categories
+curl -X GET http://localhost:3000/api/category
+
+# Create Energy Consumption Record
+curl -X POST http://localhost:3000/api/ecr -H "Content-Type: application/json" -d "{\"device_id\": \"__DEVICE_ID__\", \"energy_comsumption\": \"__ENERGY_CONSUMPTION__\", \"timestamp\": \"__TIMESTAMP__\"}"
+
+# Get Energy Consumption Records
+curl -X GET http://localhost:3000/api/ecr
+
+# Register Device
+curl -X POST http://localhost:3000/api/devices -H "Authorization: Bearer __TOKEN__" -H "Content-Type: application/json" -d "{\"name\": \"__NAME__\", \"location\": \"__LOCATION__\", \"serial_number\": \"__SERIAL_NUMBER__\", \"category_id\": \"__CATEGORY_ID__\", \"brand_id\": \"__BRAND_ID__\", \"model_id\": \"__MODEL_ID__\"}"
+
+# Get Devices
+curl -X GET http://localhost:3000/api/devices
+
+# GetUserbyID
+curl -X GET http://localhost:3000/api/users/__UserID__ -H "Authorization: Bearer __TOKEN__"

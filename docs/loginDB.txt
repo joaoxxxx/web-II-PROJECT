@@ -1,0 +1,5 @@
+user: dbuser
+password: pw2db123!
+port: 13399
+hostname: mysql-295b70c4-dbdev.b.aivencloud.com
+database: teste

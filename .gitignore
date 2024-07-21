@@ -1,0 +1,9 @@
+node_modules/*
+Endpoints.txt
+Passos.txt
+Questões.txt
+Temp.txt
+Database.js
+Teste.js
+package.json
+package-lock.json

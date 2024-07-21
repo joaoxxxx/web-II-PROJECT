@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="icon" href="assets/images/cima.png" type="image/png">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/tailwindcss@0.3.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.0.2/sha.js"></script>
+</head>
+<style>
+    .butao .btn, .cta .btn {
+    background-color: #2e71b4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.butao :hover{background-color: #1f4c79;}
+
+.baracima{margin-left: 500px;}
+body {
+    font-family: Arial, sans-serif;
+    font-style: #556677;
+}
+.col{border-color:beige;border-left: 2px;border-right: 2px;}
+.row{display: flex;
+    flex-wrap: wrap;}
+
+header{
+    background-color: #14181C;
+    padding: 10px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header li a{
+        font-size: 16px;
+}       
+nav ul {
+    list-style-type: none;
+}
+nav ul li {
+    display: inline;
+    margin-right: 30px;
+}     
+nav ul li a {
+    position: relative;
+    top: 1px;
+    left: 190px;
+    color: #99AABB;
+    text-decoration: none;
+}
+nav ul li a{
+    transition: color 0.3s linear;
+}
+nav ul li a:hover {
+    color:#2e71b4;
+}
+
+main {
+    padding: 20px;
+    min-height: calc(100vh - 170px)
+}
+
+main {
+    padding: 20px;
+    min-height: calc(100vh - 170px)
+}
+</style>
+<body class="h-screen overflow-hidden" style="background: #edf2f7;">
+    <header>
+        <div class="logo">
+            <a href="index.html" class="logosite">
+                <img src="./assets/images/logo.png" style="height: 50px;">
+            </a>
+        </div>
+        <div class="baracima"></div>
+        <nav>
+            <ul>
+                <li><a href="faq.html">Sobre Nós</a></li>
+             
+            </ul>
+        </nav>
+        <div class="butao">
+            <a href="signin.html" class="btn">Login/SignUp</a>
+        </div>
+    </header>
+    <div class="bg-grey-lighter min-h-screen flex flex-col">
+            <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2" style="background: #edf2f7;">
+                <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full" style="border-radius: 30px;position: relative;bottom: 20px;"">
+                    <h1 class="mb-8 text-3xl text-center">Criar conta</h1>
+                    <input 
+                    type="text"
+                    class="block border border-grey-light w-full p-3 rounded mb-4"
+                    id="name"
+                    placeholder="Nome completo" />
+
+                <input 
+                    type="text"
+                    class="block border border-grey-light w-full p-3 rounded mb-4"
+                    id="username"
+                    placeholder="Nome de usuário" />
+
+                <input 
+                    type="email"
+                    class="block border border-grey-light w-full p-3 rounded mb-4"
+                    id="email"
+                    placeholder="Email" />
+
+                <input 
+                    type="password"
+                    class="block border border-grey-light w-full p-3 rounded mb-4"
+                    id="password"
+                    placeholder="Senha" />
+                <input 
+                    type="password"
+                    class="block border border-grey-light w-full p-3 rounded mb-4"
+                    id="confirm_password"
+                    placeholder="Confirme a sua senha" />
+
+                <button
+                    type="button"
+                    onclick="validateAndSubmit()"
+                    class="w-full text-center py-3 rounded bg-green text-white hover:bg-green-dark focus:outline-none my-1"
+                >Criar conta</button>
+
+                    <div class="text-center text-sm text-grey-dark mt-4">
+                        Ao criar conta, você concorda com os   
+                        <a class="no-underline border-b border-grey-dark text-grey-dark" href="#">
+                            Termos de serviço
+                        </a> e
+                        <a class="no-underline border-b border-grey-dark text-grey-dark" href="#">
+                            Politica de Privacidade
+                        </a>
+                    </div>
+                </div>
+
+                <div class="text-grey-dark mt-2" style="padding-bottom: 20px;">
+                    Já tem uma conta? 
+                    <a class="no-underline border-b border-blue text-blue" href="signin.html">
+                        Iniciar sessão
+                    </a>.
+                </div>
+            </div>
+        </div>
+        <script>
+            function validateAndSubmit() {
+                var name = document.getElementById("name").value;
+                var username = document.getElementById("username").value;
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+                var confirm_password = document.getElementById("confirm_password").value;
+    
+                if (name === "" || username === "" || email === "" || password === "" || confirm_password === "") {
+                    alert("Por favor, preencha todos os campos.");
+                    return;
+                }
+    
+                if (password !== confirm_password) {
+                    alert("As senhas não coincidem.");
+                    return;
+                }
+                apiConnection(name, username, email, password);
+            }
+    
+            function apiConnection(name, username, email, password) {
+                var apiUrl = 'http://localhost:3000/api/users';
+                var formData = {
+                    name: name,
+                    username: username,
+                    email: email,
+                    password: password
+                };
+    
+                fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    alert(data.message);    
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.error('There was an error', error);
+                    alert('Houve um erro ao criar a conta.');
+                }); 
+            }
+        </script>
+    </body>
+    </html>
